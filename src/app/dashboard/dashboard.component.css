@@ -1,0 +1,28 @@
+body{
+    margin: 0px;
+}
+.parent{
+    width: 100vw;
+    height: 100vh;
+    background-color: aqua;
+    display: flex;
+}
+.left{
+    width: 20vw;
+    height: 100vh;
+    background-color: rgb(190, 23, 120);
+    color: white;
+    text-align: center;
+}
+.right{
+    width: 80vw;
+    height: 100vh;
+    background-color: rgb(155, 53, 75);
+}
+button{
+    background-color: red;
+    width: 150px;
+    color: white;
+}
+
+

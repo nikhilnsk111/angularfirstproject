@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="main">
+        <div class="container">
+        <h1>EMI</h1><br>
+        <label>principle:</label>
+        <input type="number" [(ngModel)]="principle"><br><br>
+        <label>Rate:</label>
+        <input type="number" [(ngModel)]="rate"><br><br><br>
+        <label>period:</label>
+        <input type="number" [(ngModel)]="period"><br><br>
+
+        <button (click)="emi()">Check EMI value</button><br><br>
+        <h3>{{result}}</h3>
+    </div>
+</div>
+</body>
+</html>

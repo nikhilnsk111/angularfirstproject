@@ -1,0 +1,10 @@
+*{
+    margin: 0px;
+}
+.main{
+    width: 80vw;
+    height: 100vh;
+    background-image: url(https://media.istockphoto.com/id/1263682795/photo/front-door-of-home-with-beautiful-floor-plan-design.jpg?s=612x612&w=0&k=20&c=Vc7rijJvVCnXl2PE3Tn8JDOfXgQxceIPDG5Ndt7eS9k=);
+    background-repeat: no-repeat;
+    background-size: cover;
+}

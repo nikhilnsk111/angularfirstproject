@@ -1,0 +1,17 @@
+*{
+    margin: 0px;
+}
+.main{
+    width: 80vw;
+    height: 100vh;
+    background-color: rgb(226, 153, 43);
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    width: 300px;
+    height: 300px;
+    background-color: rgb(207, 29, 163);
+    text-align: center;   
+}

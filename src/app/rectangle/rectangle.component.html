@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <div class="main">
+    <div class="container">
+      <h1>Rectangle</h1><br>
+
+      
+      <label>Number 1:</label>
+      <input type="number" [(ngModel)]="length"><br><br>
+      <label>Number 2:</label>
+      <input type="number" [(ngModel)]="breadth"><br><br><br>
+      <button (click)="Area()">Area</button>
+      <button (click)="Perimeter()">Perimeter</button><br><br>
+      
+
+      <h3>{{result}}</h3><br><br>
+
+
+
+   </div>
+    </div>
+</body>
+</html>
