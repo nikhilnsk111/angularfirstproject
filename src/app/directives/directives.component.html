@@ -1,0 +1,40 @@
+<h1>Products</h1><br>
+<table border="2px">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Rating</th>
+
+        </tr>
+
+    </thead>
+    <tbody>
+        <tr *ngFor="let product of products">
+        <td>{{product.name | uppercase}}</td>
+        <td [ngStyle]="{'color':product.price<2000 ?'green':'red'}">{{product.price | currency}}</td>
+        <td [ngClass]="{'green':product.rating>4,'red':product.rating<2,'yellow':product.rating>2&&product.rating<4}">{{product.rating}}</td>
+    </tr>
+
+    </tbody>
+</table><br>
+
+<!-- for present date structure -->
+<h1>{{newDate | date:'yyyy-MM-dd'}}</h1><br>
+
+
+<!-- for aligning the items in line -->
+    <ol>
+        <li *ngFor="let state of states">{{state}}
+
+        </li>
+    </ol><br><br>
+    <ul>
+        <li *ngFor="let state of states">{{state}}</li>
+    </ul><br>
+    <select>
+        <option *ngFor="let state of states">{{state}}</option>
+    </select>
+
+    <p *ngIf="!isVisible">Welcometo Bapatla</p>
+    <p *ngIf="isVisible">Thanks for Visiting</p>

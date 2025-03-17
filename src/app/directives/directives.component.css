@@ -1,0 +1,16 @@
+*{
+    margin: 0px;
+}
+table{
+   background-color: white; 
+   color: black;
+}
+.green{
+    color: green;
+}
+.red{
+    color: red;
+}
+.yellow{
+    color: rgb(38, 0, 255);
+}

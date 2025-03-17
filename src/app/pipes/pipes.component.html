@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Flipcart</h1>
+    <div class="parent">
+    <div class="a">
+<input type="text" placeholder="search" [(ngModel)]="term" (keyup)="search()"><br><br>
+
+
+<button (click)="sortup()">Price low to high</button>
+<button (click)="sortdown()">Price high to low</button>
+
+
+<button (click)="sorton()">Rating low to high</button>
+<button (click)="sortoff()">Rating high to low</button><br><br>
+    
+<button (click)="create()">Create Product</button>
+
+<button (click)="map()">Apply 50% Disocunt</button>
+<button (click)="map()">Price with Delivery charges</button><br><br>
+
+<button  (click)="reduce()">Total Price</button>
+<button  (click)="reduce()">Total cart items</button>
+
+
+
+    </div>
+    <div class="b">
+
+
+<label> Name:</label>
+<input type="text" [(ngModel)]="name"><br><br>
+<label> Price:</label>
+<input type="number" [(ngModel)]="price"><br><br>
+<label>Rating:</label>
+<input type="number" [(ngModel)]="rating"><br><br>
+<label>Free Delivery:</label>
+<label>YES</label>
+<input type="radio" name="Free Delivery">
+<label>NO</label>
+<input type="radio" name="Free Delivery"><br><br>
+<button  (click)="reduce()">Add to cart</button>
+
+
+
+
+</div>
+</div>
+
+
+
+    <table  border="1" [cellPadding]="10"  [cellSpacing]="2">
+        <thead>
+<tr>
+    <th width="200">S.No</th>
+    <th width="200">ProductName</th>
+    <th width="200">Price</th>
+    <th width="200">Rating</th>
+    <th width="200">FreeDelivery</th>
+    <th width="200">Action</th>
+
+</tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let product of products;let i = index">
+                <td>{{i+1}}</td>
+                <td>{{product.ProductName | uppercase}}</td>
+                <td>{{product.Price}}</td>
+                <td>{{product.Rating}}</td>
+                <td>
+                {{product.FreeDelivery}}
+                </td>
+                
+
+                <td>
+                    <button (click)="delete(i)">Delete</button>
+                </td>
+    </tr>
+        </tbody>
+    </table>
+</body>
+</html>

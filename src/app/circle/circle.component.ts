@@ -12,7 +12,7 @@ export class CircleComponent {
 
   Area(){
     console.log(this.radius);
-    this.result=this.radius*this.radius;
+    this.result=3.14*this.radius*this.radius;
     console.log(this.result);
   }
     Perimeter(){

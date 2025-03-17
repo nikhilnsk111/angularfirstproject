@@ -17,8 +17,10 @@ import { LogoutComponent } from './logout/logout.component';
 import { FormsModule } from '@angular/forms';
 import { EmiComponent } from './emi/emi.component';
 import { SimpleinterestComponent } from './simpleinterest/simpleinterest.component';
-import { CelsiusComponent } from './celsius/celsius.component';
 import { TemperatureComponent } from './temperature/temperature.component';
+import { DirectivesComponent } from './directives/directives.component';
+import { EmployeeComponent } from './employee/employee.component';
+import { PipesComponent } from './pipes/pipes.component';
 
 
 @NgModule({
@@ -37,8 +39,10 @@ import { TemperatureComponent } from './temperature/temperature.component';
        LogoutComponent,
        EmiComponent,
        SimpleinterestComponent,
-       CelsiusComponent,
        TemperatureComponent,
+       DirectivesComponent,
+       EmployeeComponent,
+       PipesComponent,
   
   ],
   imports: [
