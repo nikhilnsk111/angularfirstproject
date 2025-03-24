@@ -21,8 +21,8 @@
     
 <button (click)="create()">Create Product</button>
 
-<button (click)="map()">Apply 50% Disocunt</button>
-<button (click)="map()">Price with Delivery charges</button><br><br>
+<button (click)="mapin()">Apply 50% Disocunt</button>
+<button (click)="mapit()">Price with Delivery charges</button><br><br>
 
 <button  (click)="reduce()">Total Price</button>
 <button  (click)="reduce()">Total cart items</button>
@@ -71,6 +71,7 @@
                 <td>{{i+1}}</td>
                 <td>{{product.ProductName | uppercase}}</td>
                 <td>{{product.Price}}</td>
+                
                 <td>{{product.Rating}}</td>
                 <td>
                 {{product.FreeDelivery}}

@@ -37,10 +37,40 @@ Directives:
 2.Attribute Directives
           ngClass , ngStyle
 
-PIPES
+<!-- PIPES -->
 =======
    Useful to alter the DOM format
 
 | uppercase
 | lowercase
-|
+| date
+
+<!-- Possible API calls -->
+========================
+1.all                -         get      get(url)
+2.specific           -         get      
+3.filtering          -         get      get(url?filter=term)
+4.sorting            -         get      get(url?sortBy=column&order=asc/desc)
+5.pagination         -         get       get(url?limit=limit&page=page)
+
+6.create             -         post
+7.update             -         put
+8.delete             -         delete      delete(url/id)
+
+
+
+
+1.Template Driven Forms--->  [(ngModel)]
+             -html
+             -simple
+2.Reactive Forms------->
+             -typescript
+             -complex
+
+             1.FormGroup
+             2.FormControl
+             3.Nested FormGroup
+             4.Dynamic Forms
+             5.Form Array
+             6.Validators
+

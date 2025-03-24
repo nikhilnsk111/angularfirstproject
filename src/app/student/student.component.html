@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>STUDENT ID CARD</h1>
+
+    <input class="n" type="text" [(ngModel)]="term" (keyup)="filter()" placeholder="enter here to search">
+
+<label>Column:</label>
+    <select class="m"  [(ngModel)]="column">
+        <option>name</option>
+        <option>phone</option>
+        <option>city</option>
+        <option>dob</option>
+        <option>id</option>
+      </select>
+
+      <label>Order:</label>
+   <select  class="m" [(ngModel)]="order">
+        <option>asc</option>
+        <option>decs</option>
+   </select>  &nbsp;   &nbsp; 
+
+   <button class="f"  (click)="sort()">sort</button> 
+<label>Limit:</label>
+   <select class="m" [(ngModel)]="limit">
+    <option>10</option>
+    <option>20</option>
+    <option>30</option>
+   </select>
+
+   <label>Page:</label>
+   <select class="m" [(ngModel)]="page">
+    <option>1</option>
+    <option>2</option>
+    <option>3</option>
+
+   </select> &nbsp;   &nbsp; 
+
+   
+   <button class="o" (click)="pagination()">Pagination</button> &nbsp;  &nbsp; 
+
+   <button class="p" routerLink="/dashboard/create-student">create student</button><br><br>
+
+    <div class="main">
+       
+        <div class="box" *ngFor="let data of Student">
+
+            
+        
+            
+        <div class="header">
+           
+            <div class="name">
+            <h3> {{data.school_name | uppercase}}</h3>
+              <div><h6>Email:{{data.email}}
+        
+              Location:{{data.school_city}}
+              Pin:{{data.school_pin}}</h6> 
+            </div>
+            
+            </div>
+            <div class="image">
+                <img [src]="data.school_logo" alt="" width="90" height="70"></div>
+            
+        </div>
+        <div class="middle">
+            <div class="left">
+                <div class="image" >
+                    <img [src]="data.profile_picture" alt="" width="130" height="120" ></div>
+            </div>
+            <div class="right">
+                <h3><div class="name">Name      :{{data.name | uppercase}}</div>
+                 <div class="name">Phone No  :{{data.phone}}</div>
+                 <div class="name">City      :{{data.city}}</div>
+                <div  class="name"> Id:{{data.id}}</div>
+                 <div class="name">DOB       :{{data.dob}}</div></h3> 
+             
+                </div>
+             </div>
+             <div class="footer">
+                <button class="b">View</button>
+                <button class="a">Edit</button>
+            
+                <button  class="c" (click)="delete(data.id)">Delete</button>
+               
+            
+            </div>
+        </div>
+    
+    </div>
+</body>
+</html>

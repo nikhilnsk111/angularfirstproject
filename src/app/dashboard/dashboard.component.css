@@ -15,6 +15,7 @@ body{
     background-color: rgb(23, 190, 98);
     color: white;
     text-align: center;
+    overflow: auto;
     
 
 }

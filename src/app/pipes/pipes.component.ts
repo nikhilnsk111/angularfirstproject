@@ -23,6 +23,7 @@ export class PipesComponent {
   delete(i:number){
     this.products.splice(i,1);
   }
+ 
 
   sortup(){
     this.products.sort((a:any,b:any)=>a.Price-b.Price);
@@ -47,8 +48,11 @@ export class PipesComponent {
 }
 
 // map method
-map(){
-   this.products=this.products.map((product:any)=>{product.Price=product.Price*(50/100);return product;})
+mapin(){
+   this.products=this.products.map((product:any)=>{product.Price=product.Price+product.Price*(50/100);return product;})
+}
+mapit(){
+  this.products=this.products.map((product:any)=>{product.Price=product.Price+50;return product;})
 }
 
 // reduce method
@@ -56,6 +60,8 @@ reduce(){
   let totalcost=this.products.reduce((sum:any,product:any)=>sum+product.Price,0);
   alert(totalcost);
 }
+
+
 
 // create
 name:string='';

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   
+    <table class="table table-dark" border="1" [cellPadding]="10"  [cellSpacing]="2">
+        <thead>
+        <tr>
+            <th>S No</th>
+            <th>AccountName</th>
+            <th>City</th>
+            <th>AccountNumber</th>
+            <th>Avaliablebalance</th>
+            <th>IFSC code</th>
+            <th>Account id</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let accounts of accounts;let i = index">
+            <td>{{i+1}}</td>
+            <td>{{accounts.account_name}}</td>
+            <td>{{accounts.city}}</td>
+
+            <td>{{accounts.account_number}}</td>
+            <td>{{accounts.available_balance}}</td>
+            <td>{{accounts.ifsc_code}}</td>
+            <td>{{accounts.id}}</td>
+
+        </tr>
+           
+    </tbody>
+    </table>
+</body>
+</html>
