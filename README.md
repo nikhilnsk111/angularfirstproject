@@ -48,7 +48,7 @@ Directives:
 <!-- Possible API calls -->
 ========================
 1.all                -         get      get(url)
-2.specific           -         get      
+2.specific           -         get      get(URL/id)
 3.filtering          -         get      get(url?filter=term)
 4.sorting            -         get      get(url?sortBy=column&order=asc/desc)
 5.pagination         -         get       get(url?limit=limit&page=page)

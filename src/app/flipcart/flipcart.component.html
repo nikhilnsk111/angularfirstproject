@@ -9,17 +9,23 @@
   <h1>Flipcart</h1>
     <div class="flipcart-container">
         <div class="flipcart-card" *ngFor="let flipcart of flipcarts">
-          <img [src]="flipcart.image" alt="flipcart Image" class="flipcart-image" />
+          <div class="image">
+          <img [src]="flipcart.image" alt="flipcart Image" class="flipcart-image">    <div class="rating"><app-rating [rating]= flipcart.rating?.rate></app-rating>
+
+          </div>
+
+        </div>
           <div class="flipcart-details">
             <h3 class="flipcart-title">{{ flipcart.title }}</h3>
-            <p class="flipcart-description">{{ flipcart.description  | slice:0:200 }}</p>
+            <p class="flipcart-description">{{ flipcart.description  | slice:0:100 }}</p>
             <div class="flipcart-price-rating">
-              <span class="flipcart-price">₹{{ flipcart.price }}</span>
-              <span class="flipcart-rate">⭐⭐⭐ {{ flipcart.rating.rate}}</span>
+              <span class="flipcart-price">₹{{ flipcart.price | balance}}</span>
+              <span class="flipcart-rate"> {{ flipcart.rating.rate}}</span>
             </div>
           </div>
         </div>
       </div>
       
-</body>
+
+  </body>   
 </html>

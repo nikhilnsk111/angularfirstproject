@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { VehicleService } from '../vehicle.service';
 
+
 @Component({
   selector: 'app-vehicle',
   templateUrl: './vehicle.component.html',
@@ -21,6 +22,7 @@ constructor(private _vehicleService:VehicleService){
    )
   }
 
+ 
   // filter
   filter(){
     this._vehicleService.getFilteredVehicles(this.term).subscribe(

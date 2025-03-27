@@ -8,7 +8,6 @@ import { RectangleComponent } from './rectangle/rectangle.component';
 import { CircleComponent } from './circle/circle.component';
 import { BmiComponent } from './bmi/bmi.component';
 import { DataBindingComponent } from './data-binding/data-binding.component';
-import { LogoutComponent } from './logout/logout.component';
 import { EmiComponent } from './emi/emi.component';
 import { SimpleinterestComponent } from './simpleinterest/simpleinterest.component';
 import { TemperatureComponent } from './temperature/temperature.component';
@@ -23,9 +22,23 @@ import { MailComponent } from './mail/mail.component';
 import { PinterestComponent } from './pinterest/pinterest.component';
 import { WeatherComponent } from './weather/weather.component';
 import { CreateVehicleComponent } from './create-vehicle/create-vehicle.component';
-import { StudentComponent } from './student/student.component';
 import { CreateUserComponent } from './create-user/create-user.component';
-import { CreateStudentComponent } from './create-student/create-student.component';
+
+import { VehicleDetailsComponent } from './vehicle-details/vehicle-details.component';
+import { CreateReportComponent } from './create-report/create-report.component';
+
+import { LoginComponent } from './login/login.component';
+import { AuthenticationGuard } from './authentication.guard';
+
+
+import { CardDetailsComponent } from './card-details/card-details.component';
+import { CardComponent } from './card/card.component';
+import { CreateCardComponent } from './create-card/create-card.component';
+import { Sibling1Component } from './sibling1/sibling1.component';
+import { ParentComponent } from './parent/parent.component';
+import { TextAreaComponent } from './text-area/text-area.component';
+
+
 
 
 
@@ -33,7 +46,9 @@ import { CreateStudentComponent } from './create-student/create-student.componen
 
 
 const routes: Routes = [
-  {path:'dashboard',component:DashboardComponent,children:[
+
+  {path:'login',component:LoginComponent},
+  {path:'dashboard',component:DashboardComponent,canActivate:[AuthenticationGuard],children:[
   {path:'home',component:HomeComponent},
   {path:'welcome',component:WelcomeComponent}, 
   {path:'data-binding',component:DataBindingComponent},
@@ -45,22 +60,42 @@ const routes: Routes = [
   {path:'pipes',component:PipesComponent},
   {path:'vehicle',component:VehicleComponent},
   {path:'accounts',component:AccountsComponent},
+  {path:'card',component:CardComponent},
+  {path:'card-details/:id',component:CardDetailsComponent},
+  
+  {path:'sibling1',component:Sibling1Component},
+  {path:'text-area',component:TextAreaComponent},
+  
+
+  {path:'create-card',component:CreateCardComponent},
+  {path:'edit-card/:id',component:CreateCardComponent},
+
+  {path:'parent',component:ParentComponent},
+ 
   
   {path:'flipcart',component:FlipcartComponent},
   {path:'mail',component:MailComponent},
   {path:'pinterest',component:PinterestComponent},
   {path:'weather',component:WeatherComponent},
   {path:'create-vehicle',component:CreateVehicleComponent},
-  {path:'student',component:StudentComponent},
   {path:'create-user',component:CreateUserComponent},
-  {path:'create-student',component:CreateStudentComponent},
+  
+  
+  
 
+
+  {path:'vehicle-details/:id',component:VehicleDetailsComponent},
+  {path:'edit-vehicle/:id',component:CreateVehicleComponent},
+  {path:'create-report',component:CreateReportComponent},
+
+
+ 
 
   {path:'calculator',component:CalculatorComponent},
   {path:'rectangle',component:RectangleComponent},
   {path:'circle',component:CircleComponent},
   {path:'bmi',component:BmiComponent},
-  {path:'logout',component:LogoutComponent},
+  
   
 
 

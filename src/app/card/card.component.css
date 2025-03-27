@@ -1,0 +1,118 @@
+.main{
+    width: 80vw;
+    height: 100vh;
+    background-color: rgb(189, 107, 134);
+    
+}
+.z{
+    background-color: blueviolet;
+    color: black;
+    width: 60px;
+    height: 40px;
+    border-radius: 5px;
+}
+
+.footer{
+    width: 80vw;
+    height: 100vh;
+    background-color: rgb(189, 107, 134);
+    overflow: auto;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 20px;
+
+    
+}
+.card{
+    width: 350px;
+    height: 300px;
+    background-color:gold;
+    margin-top: 10px;
+    border-radius: 10px;
+    
+    
+
+}
+.cardtop{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+
+.cardmid{
+    width: 100%;
+    height: 60%;
+    background-color: rgb(14, 98, 194);
+    color: white;
+    display: flex;
+    
+}
+.cardmidleft{
+    width: 50%;
+    height: 100%;
+    
+}
+.w{
+margin-top: 20px;
+margin-left: 10px;
+}
+.cardmidright{
+    width: 50%;
+    height: 100%;
+}
+.cardmidright .name{
+margin-top: 10px;
+
+}
+.cardbottom{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-evenly;
+    margin-bottom: 3px;
+}
+
+h6{
+    font-size: 15px;
+}
+
+
+
+
+.n{
+    width: 200px;
+    height: 40px;
+    margin-left: 10px;
+}
+.m{
+    width: 80px;
+    height: 40px;
+    background-color:rgb(50, 183, 216);
+    color: white;
+}
+
+.f{
+    width: 80px;
+    height: 40px;
+    background-color: rgb(190, 18, 168);
+    color: white;
+}
+
+.o{
+    width: 130px;
+    height: 40px;
+    background-color: orangered;
+    color: white;
+}
+.p{
+    width: 150px;
+    height: 40px;
+    background-color: green;
+    color: white;
+}

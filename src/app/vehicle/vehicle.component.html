@@ -51,7 +51,9 @@
 
 
             <th>Image</th>
-            <th>Actions</th>
+            <th>Views</th>
+
+            <th colspan="2">Actions</th>
 
 
 
@@ -62,11 +64,16 @@
             <td>{{i+1}}</td>
             <td>{{vehicle.Vehicle}}</td>
             <td>{{vehicle.color}}</td>
-            <td>{{vehicle.cost}}</td>
+            <td>{{vehicle.cost | balance}}</td>
             <td>{{vehicle.fuel}}</td>
             <td>{{vehicle.id}}</td>
 
-            <td><img src={{vehicle.image}} alt="{{vehicle.image}}" width="100px" height="100px"></td>
+            <td><img  src={{vehicle.image}} alt="{{vehicle.image}}" width="100px" height="100px"></td>
+            
+            <td><button routerLink="/dashboard/vehicle-details/{{vehicle.id}}"  class="btn btn-primary">View</button></td>
+
+            <td><button routerLink="/dashboard/edit-vehicle/{{vehicle.id}}"  class="btn btn-warning">Edit</button></td>
+
             <td><button (click)="delete(vehicle.id)">Delete</button></td>
 
 

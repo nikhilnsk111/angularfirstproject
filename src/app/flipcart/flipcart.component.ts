@@ -18,4 +18,10 @@ constructor(private _flipcartService:FlipcartService){
     }
    )
   }
+
+  capture(value:number){
+    alert(value);
+}
+
+
 }

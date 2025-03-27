@@ -13,7 +13,7 @@ import { CircleComponent } from './circle/circle.component';
 
 import { BmiComponent } from './bmi/bmi.component';
 import { DataBindingComponent } from './data-binding/data-binding.component';
-import { LogoutComponent } from './logout/logout.component';
+
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { EmiComponent } from './emi/emi.component';
 import { SimpleinterestComponent } from './simpleinterest/simpleinterest.component';
@@ -30,9 +30,28 @@ import { MailComponent } from './mail/mail.component';
 import { PinterestComponent } from './pinterest/pinterest.component';
 import { WeatherComponent } from './weather/weather.component';
 import { CreateVehicleComponent } from './create-vehicle/create-vehicle.component';
-import { StudentComponent } from './student/student.component';
+
 import { CreateUserComponent } from './create-user/create-user.component';
-import { CreateStudentComponent } from './create-student/create-student.component';
+
+import { VehicleDetailsComponent } from './vehicle-details/vehicle-details.component';
+
+import { CreateReportComponent } from './create-report/create-report.component';
+
+import { LoginComponent } from './login/login.component';
+
+
+import { CardDetailsComponent } from './card-details/card-details.component';
+import { CardComponent } from './card/card.component';
+import { CreateCardComponent } from './create-card/create-card.component';
+import { Sibling1Component } from './sibling1/sibling1.component';
+import { Sibling2Component } from './sibling2/sibling2.component';
+import { ParentComponent } from './parent/parent.component';
+import { ChildComponent } from './child/child.component';
+import { RatingComponent } from './rating/rating.component';
+import { TextAreaComponent } from './text-area/text-area.component';
+import { CapitalDirective } from './capital.directive';
+import { BalancePipe } from './balance.pipe';
+
 
 
 
@@ -50,7 +69,7 @@ import { CreateStudentComponent } from './create-student/create-student.componen
   
     BmiComponent,
        DataBindingComponent,
-       LogoutComponent,
+      
        EmiComponent,
        SimpleinterestComponent,
        TemperatureComponent,
@@ -65,9 +84,29 @@ import { CreateStudentComponent } from './create-student/create-student.componen
        PinterestComponent,
        WeatherComponent,
        CreateVehicleComponent,
-       StudentComponent,
+       
        CreateUserComponent,
-       CreateStudentComponent,
+       
+       VehicleDetailsComponent,
+      
+       CreateReportComponent,
+            
+              LoginComponent,
+                          
+                          
+                           CardDetailsComponent,
+                           CardComponent,
+                           CreateCardComponent,
+                           Sibling1Component,
+                           Sibling2Component,
+                           ParentComponent,
+                           ChildComponent,
+                           RatingComponent,
+                           TextAreaComponent,
+                           CapitalDirective,
+                           BalancePipe,
+                          
+                           
   
   ],
   imports: [

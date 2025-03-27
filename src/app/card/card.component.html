@@ -1,0 +1,92 @@
+<div class="main">
+
+    <h1>Student Id Cards</h1>
+    <div class="header">
+    
+        <input class="n" type="text" [(ngModel)]="term" (keyup)="filter()" placeholder="enter here to search">&nbsp;   &nbsp; 
+
+        <label><b>Column:</b></label>
+     <select  class="m" [(ngModel)]="column">
+        <option>name</option>
+        <option>phone</option>
+        <option>city</option>
+        <option>dob</option>
+        <option>id</option>
+      </select> 
+<label><b>Order:</b></label>
+   <select  class="m" [(ngModel)]="order">
+        <option>asc</option>
+        <option>decs</option>
+   </select> &nbsp;   &nbsp; 
+
+   <button class="f" (click)="sort()">sort</button> 
+
+   <label><b>limit:</b></label>
+
+   <select class="m" [(ngModel)]="limit">
+    <option>10</option>
+    <option>20</option>
+    <option>30</option>
+   </select>  
+   <label><b>page:</b></label>
+
+   <select class="m" [(ngModel)]="page">
+    <option>1</option>
+    <option>2</option>
+    <option>3</option>
+
+   </select> &nbsp;   &nbsp; 
+
+   
+   <button  class="o" (click)="pagination()">Pagination</button> &nbsp;   &nbsp; 
+
+   <button  class="p" routerLink="/dashboard/create-card">create card</button> &nbsp;   &nbsp; 
+
+
+
+    </div><br><br>
+    <div class="footer">
+        <div class="card" *ngFor="let student of card" >
+            <div class="cardtop">
+           
+          <div class="name"> <h5>{{student.school_name}}</h5>
+
+           <div  class="name"><h6><b>{{student.email}}</b>
+                <b>{{student.school_city}}</b>
+                <b>{{student.school_pin}}</b></h6>
+            </div> 
+            </div>
+            
+          <div class="image">  <img [src]="student.school_logo" alt="" width="50px" height="50px"> 
+            
+          </div> 
+            </div>
+            <div class="cardmid">
+                 <div class="cardmidleft">
+
+                   <div class="w"> <img [src]="student.profile_picture" alt="" width="130px" height="130px">
+
+                   </div>
+                 </div>
+                 <div class="cardmidright">
+                    <h6><div class="name">Name      :<b>{{student.name}}</b></div>
+                        <div class="name">Phone No  :<b>{{student.phone}}</b></div>
+                        <div class="name">City      :<b>{{student.city}}</b></div>
+                        <div class="name">DOB       :<b>{{student.dob}}</b></div> 
+                         
+                         <div class="name">id:<b>{{student.id}}</b></div></h6>
+                 </div>
+            </div>
+
+            <div class="cardbottom">
+                <button routerLink="/dashboard/card-details/{{student.id}}"
+                class="btn btn-primary">View</button>
+                <button routerLink="/dashboard/edit-card/{{student.id}}"
+                class="z">Edit</button>
+                <button (click)="delete(card.id)"
+                class="btn btn-danger">Delete</button>
+            </div>
+        </div>
+
+    </div>
+</div>
