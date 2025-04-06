@@ -2,5 +2,19 @@
 
 <app-child [a]="10" (childEvent)="capture($event)"></app-child>
 
-<app-rating [rating]="4"></app-rating>
+<app-rating [rating]="2"></app-rating>
  
+
+       
+<div class="container">
+  <label for="textArea">Enter text (max 50 characters):</label>
+  <textarea
+    id="textArea"
+    [(ngModel)]="text"
+    maxlength="50"
+    rows="4"
+    cols="50"
+  ></textarea>
+  <div class="char-count">
+    {{ text.length }}/50 characters
+  </div>

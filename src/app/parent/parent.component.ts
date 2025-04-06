@@ -20,6 +20,8 @@ export class ParentComponent {
    textlength:number=0;
  
      
+   text: string = '';
+   
  
       
    

@@ -52,6 +52,7 @@ import { LifeCycleHooksComponent } from './life-cycle-hooks/life-cycle-hooks.com
 
 
 
+
 const routes: Routes = [
 
   {path:'login',component:LoginComponent},
@@ -79,6 +80,7 @@ const routes: Routes = [
   {path:'edit-employee/:id',component:CreateEmployeeComponent},
 
 
+  
   
   
 
