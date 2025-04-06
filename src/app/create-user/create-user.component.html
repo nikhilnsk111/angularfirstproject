@@ -12,6 +12,12 @@
     </div>
     <label>Email:</label>
     <input class="a" type="email" formControlName="email"><br><br>
+    <div *ngIf="userForm.get('email')?.touched && userForm.get('email')?.invalid">
+        <p *ngIf="userForm.get('email')?.errors?.['required']">Email is Required</p>
+        <p *ngIf="userForm.get('email')?.errors?.['minlength']">Email should be  minimum 6 characters</p>
+        <p *ngIf="userForm.get('email')?.errors?.['maxlength']">Email should be  maximum of 12 characters</p>
+        <p *ngIf="userForm.get('email')?.errors?.['GoogleMail']">Please Enter Google Mail only</p>
+    </div>
      <label>Password:</label>
     <input class="a" type="password" formControlName="password"><br><br>
     

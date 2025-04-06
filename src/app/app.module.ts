@@ -22,7 +22,7 @@ import { DirectivesComponent } from './directives/directives.component';
 import { EmployeeComponent } from './employee/employee.component';
 import { PipesComponent } from './pipes/pipes.component';
 import { VehicleComponent } from './vehicle/vehicle.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { ErrComponent } from './err/err.component';
 import { AccountsComponent } from './accounts/accounts.component';
 import { FlipcartComponent } from './flipcart/flipcart.component';
@@ -48,9 +48,17 @@ import { Sibling2Component } from './sibling2/sibling2.component';
 import { ParentComponent } from './parent/parent.component';
 import { ChildComponent } from './child/child.component';
 import { RatingComponent } from './rating/rating.component';
-import { TextAreaComponent } from './text-area/text-area.component';
 import { CapitalDirective } from './capital.directive';
 import { BalancePipe } from './balance.pipe';
+
+import { EmployeeTableComponent } from './employee-table/employee-table.component';
+
+import { EmployeeDetailsComponent } from './employee-details/employee-details.component';
+import { CreateEmployeeComponent } from './create-employee/create-employee.component';
+import { TokenInterceptor } from './token.interceptor';
+import { AboutUsModule } from './about-us/about-us.module';
+import { LifeCycleHooksComponent } from './life-cycle-hooks/life-cycle-hooks.component';
+import { TextAreaComponent } from './text-area/text-area.component';
 
 
 
@@ -102,9 +110,17 @@ import { BalancePipe } from './balance.pipe';
                            ParentComponent,
                            ChildComponent,
                            RatingComponent,
-                           TextAreaComponent,
+                           
                            CapitalDirective,
                            BalancePipe,
+                           
+                           EmployeeTableComponent,
+                          
+                           EmployeeDetailsComponent,
+                                                      CreateEmployeeComponent,
+                                                      LifeCycleHooksComponent,
+                                                      TextAreaComponent,
+                                                     
                           
                            
   
@@ -114,9 +130,17 @@ import { BalancePipe } from './balance.pipe';
     AppRoutingModule,
     FormsModule,
   HttpClientModule,
-  ReactiveFormsModule
+  ReactiveFormsModule,
+  AboutUsModule
   ],
-  providers: [],
+  providers: [
+
+    {
+      provide:HTTP_INTERCEPTORS,
+      useClass:TokenInterceptor,
+      multi:true
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

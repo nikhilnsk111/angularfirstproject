@@ -1,4 +1,5 @@
-import { Component, Input } from '@angular/core';
+import { Component, Output } from '@angular/core';
+import { CommonService } from '../common.service';
 
 @Component({
   selector: 'app-text-area',
@@ -7,6 +8,6 @@ import { Component, Input } from '@angular/core';
 })
 export class TextAreaComponent {
 
-
+ 
  
 }

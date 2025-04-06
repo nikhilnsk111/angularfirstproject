@@ -21,7 +21,7 @@ export class CardDetailsComponent {
         this.id=data.id;
         console.log(this.id);
       },(err:any)=>{
-        alert('Internal Server Error');
+        alert("Internal Server Error");
       }
     )
 
@@ -30,7 +30,7 @@ export class CardDetailsComponent {
         console.log(data);
         this.card=data;
       },(err:any)=>{
-        alert('Internal Server Error')
+        alert("Internal Server Error")
       }
 
     )
