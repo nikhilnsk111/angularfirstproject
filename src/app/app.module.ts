@@ -53,12 +53,12 @@ import { BalancePipe } from './balance.pipe';
 
 import { EmployeeTableComponent } from './employee-table/employee-table.component';
 
-import { EmployeeDetailsComponent } from './employee-details/employee-details.component';
+
 import { CreateEmployeeComponent } from './create-employee/create-employee.component';
 import { TokenInterceptor } from './token.interceptor';
 import { AboutUsModule } from './about-us/about-us.module';
 import { LifeCycleHooksComponent } from './life-cycle-hooks/life-cycle-hooks.component';
-import { TextAreaComponent } from './text-area/text-area.component';
+
 
 
 
@@ -116,10 +116,10 @@ import { TextAreaComponent } from './text-area/text-area.component';
                            
                            EmployeeTableComponent,
                           
-                           EmployeeDetailsComponent,
+                          
                                                       CreateEmployeeComponent,
                                                       LifeCycleHooksComponent,
-                                                      TextAreaComponent,
+                                                    
                                                      
                           
                            
