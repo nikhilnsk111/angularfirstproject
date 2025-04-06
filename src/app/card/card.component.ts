@@ -55,24 +55,26 @@ export class CardComponent {
     (data:any)=>{
       console.log(data);
       this.card=data;
+      console.log(this.card);
+
     },(err:any)=>{
-      alert('server error')
+      alert("Internal Server Error")
     }
   )
  }
 
  delete(id:any){
-  if(confirm('Are you sure u want to delete')==true){
+  if(confirm("Are you sure u want to delete?")==true){
     this._cardService.deletecard(id).subscribe(
       (data:any)=>{
-        alert('Record deleted succeessfully');
+        alert("Record deleted succeessfully!");
         this.loadcard();
       },(err:any)=>{
-        alert('server error')
+        alert("Internal Server Error!")
       }
     )
   }else{
-    alert('you have cancelled')
+    alert("You are cancelled")
   }
  }
 

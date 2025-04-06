@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>employes data</h1>
+
+    <input type="text" [(ngModel)]="term" (keyup)="filter()" placeholder="search">
+   
+    <select [(ngModel)]="column">
+        <option>name</option>
+        <option>package</option>
+        <option>gender</option>
+       
+
+    </select>
+    <select  [(ngModel)]="order">
+        <option>asc</option>
+        <option>desc</option>
+    </select>
+
+    <button (click)="sort()">Sort</button>
+
+    <select [(ngModel)]="limit">
+        <option>10</option>
+        <option>20</option>
+
+        <option>30</option>
+
+    </select>
+    <select [(ngModel)]="page">
+        <option>1</option>
+        <option>2</option>
+
+        <option>3</option>
+
+    </select>
+
+    <button (click)="pagination()">Pagination</button>
+    <button routerLink="/dashboard/create-employee">Create Employee form</button>
+    
+
+    <table class="table table-dark" border="1" [cellPadding]="10"  [cellSpacing]="2">
+        <thead>
+            <tr>
+                
+                <th>S No</th>
+                <th>Id</th>
+    
+                <th>Employee Name</th>
+                <th>gender</th>
+                <th>Ccompany</th>
+                <th>role</th>
+                <th>package</th>
+    
+    
+                <th>email</th>
+                <th>dob</th>
+                <th>address</th>
+    
+    
+                <th colspan="3">Actions</th>
+    
+            </tr>
+            
+        </thead>
+        <tbody>
+            <tr>
+                <tr *ngFor="let employee of employees;let i = index">
+                    <td>{{i+1}}</td>
+                    <td>{{employee.id}}</td>
+                    <td>{{employee.name}}</td>
+                    <td>{{employee.gender}}</td>
+                    <td>{{employee.company}}</td>
+                    <td>{{employee.role}}</td>
+                    <td>{{employee.package}}</td>
+                    <td>{{employee.email}}</td>
+                    <td>{{employee.dob}}</td>
+                    <td>{{employee.address}}</td>
+
+                    <td><button routerLink="/dashboard/employee-details/{{employee.id}}"  class="btn btn-primary">View</button></td>
+
+            <td><button routerLink="/dashboard/edit-employee/{{employee.id}}"  class="btn btn-warning">Edit</button></td>
+
+            <td><button (click)="delete(employee.id)"  class="btn btn-danger">Delete</button></td>
+
+           
+
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

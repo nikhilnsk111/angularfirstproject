@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { HomeComponent } from './home/home.component';
 import { WelcomeComponent } from './welcome/welcome.component';
@@ -36,7 +36,14 @@ import { CardComponent } from './card/card.component';
 import { CreateCardComponent } from './create-card/create-card.component';
 import { Sibling1Component } from './sibling1/sibling1.component';
 import { ParentComponent } from './parent/parent.component';
-import { TextAreaComponent } from './text-area/text-area.component';
+
+import { EmployeeTableComponent } from './employee-table/employee-table.component';
+import { CreateEmployeeComponent } from './create-employee/create-employee.component';
+import { AboutCeoComponent } from './about-us/about-ceo/about-ceo.component';
+import { AboutCompanyComponent } from './about-us/about-company/about-company.component';
+import { LifeCycleHooksComponent } from './life-cycle-hooks/life-cycle-hooks.component';
+
+
 
 
 
@@ -64,7 +71,19 @@ const routes: Routes = [
   {path:'card-details/:id',component:CardDetailsComponent},
   
   {path:'sibling1',component:Sibling1Component},
-  {path:'text-area',component:TextAreaComponent},
+  
+  
+  {path:'employee-table',component:EmployeeTableComponent},
+  {path:'create-employee',component:CreateEmployeeComponent},
+ 
+  {path:'edit-employee/:id',component:CreateEmployeeComponent},
+
+
+  
+  
+
+
+  
   
 
   {path:'create-card',component:CreateCardComponent},
@@ -87,9 +106,18 @@ const routes: Routes = [
   {path:'vehicle-details/:id',component:VehicleDetailsComponent},
   {path:'edit-vehicle/:id',component:CreateVehicleComponent},
   {path:'create-report',component:CreateReportComponent},
+  {path:'about-ceo',component:AboutCeoComponent},
+  {path:'about-company',component:AboutCompanyComponent},
+
+  {
+    path: 'items',
+    loadChildren: () => import('./payments/payments.module').then(m => m.PaymentsModule)
+  },
+
 
 
  
+  {path:'life-cycle-hooks',component:LifeCycleHooksComponent},
 
   {path:'calculator',component:CalculatorComponent},
   {path:'rectangle',component:RectangleComponent},
@@ -106,7 +134,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes,{preloadingStrategy:PreloadAllModules})],
   exports: [RouterModule],
   providers:[VehicleService]
 })
